@@ -65,7 +65,7 @@ const options2 = {
 const About = () => {
   return (
     <>
-      <section className="about-page-area section_70 bg_gray3">
+      <section className="about-page-area section_70 bg_gray3 marginTop-110px">
         <div className="container">
           <div className="row">
             <div className="col-md-12">

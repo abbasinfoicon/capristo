@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import OwlCarousel from 'react-owl-carousel';
 
 const options = {
@@ -142,7 +142,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="excellence-page-area section_70">
+      <section className="excellence-page-area section_70 bg_white">
         <div className="container">
           <div className="row">
             <div className="col-md-12">
@@ -248,7 +248,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="facts-page-area section_70">
+      <section className="facts-page-area section_70 bg_white">
         <div className="container">
           <div className="row">
             <div className="col-md-12">
@@ -394,7 +394,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="about_us-area section_70">
+      <section className="about_us-area section_70 bg_white">
         <div className="container">
           <div className="row">
             <div className="col-md-12">

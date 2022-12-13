@@ -3,13 +3,13 @@ import { Link } from 'react-router-dom'
 
 const Career = () => {
   return (
-    <section className="page-area pt-30 pb-30 bg_gray2">
+    <section className="page-area pt-30 pb-30 bg_gray2 marginTop-110px">
       <div className="container">
         <div className="row">
           <div className="col-md-12">
             <div className="title text-center">
               <h3>Become Part of our Team</h3>
-              <div className="line center"></div>
+              <div className="line"></div>
             </div>
           </div>
         </div>

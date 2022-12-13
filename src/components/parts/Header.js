@@ -1,9 +1,25 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 
 const Header = () => {
+  // Sticky Menu Area
+  useEffect(() => {
+    window.addEventListener('scroll', isSticky);
+    return () => {
+      window.removeEventListener('scroll', isSticky);
+    };
+  });
+
+
+  /* Method that will fix header after a specific scrollable */
+  const isSticky = (e) => {
+    const header = document.querySelector('.capristo-main-header-area');
+    const scrollTop = window.scrollY;
+    scrollTop >= 100 ? header.classList.add('fixed') : header.classList.remove('fixed');
+  };
+
   return (
-    <header className="capristo-main-header-area">
+    <header className="capristo-main-header-area dark_themes">
       <div className="container-fluid">
         <div className="row">
           <div className="col-md-12">
@@ -34,7 +50,7 @@ const Header = () => {
               <div className="collapse navbar-collapse" id="collapsibleNavbar">
                 <ul className="navbar-nav">
                   <li><NavLink to='/car-list'>Products & Services</NavLink></li>
-                  <li><NavLink to='/about'>Company</NavLink></li>
+                  <li><NavLink to='/contact'>Company</NavLink></li>
                   <li><NavLink to='/shop'>Online Store</NavLink></li>
                   <li><NavLink to='/blog'>Blog & News</NavLink></li>
                 </ul>
