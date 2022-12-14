@@ -1,0 +1,186 @@
+{
+    "slider": [
+        {
+            "id": 1,
+            "title": "Ferrari Roma Capristo carbon fiber parts",
+            "desc": "Elegance in Motion...",
+            "bg_img": "assets/img/slider/slider2.jpg"
+        },
+        {
+            "id": 2,
+            "title": "Ferrari Roma Capristo carbon fiber parts 2",
+            "desc": "Elegance in Motion....",
+            "bg_img": "assets/img/slider/slider1.jpg"
+        }
+    ],
+    "carList": [
+        {
+            "id": 1,
+            "img": "assets/img/cars/alfa-romeo.jpg",
+            "name": "for Alfa Romen",
+            "slug": "alfa-romen",
+            "title": "We Ensure Best Travel Logistics Service",
+            "author": "Admin"
+        },
+        {
+            "id": 2,
+            "img": "assets/img/cars/aston-martin.jpg",
+            "name": "for Aston Martin",
+            "slug": "aston-martin",
+            "title": "We Ensure Best Travel Logistics Service",
+            "author": "Admin"
+        },
+        {
+            "id": 3,
+            "img": "assets/img/cars/audi.jpg",
+            "name": "for Audi",
+            "slug": "audi",
+            "title": "We Ensure Best Travel Logistics Service",
+            "author": "Admin"
+        },
+        {
+            "id": 4,
+            "img": "assets/img/cars/bentley.jpg",
+            "name": "for Bentley",
+            "slug": "bentley",
+            "title": "We Ensure Best Travel Logistics Service",
+            "author": "Admin"
+        },
+        {
+            "id": 5,
+            "img": "assets/img/cars/chevrolet.jpg",
+            "name": "for Chevrolet",
+            "slug": "chevrolet",
+            "title": "We Ensure Best Travel Logistics Service",
+            "author": "Admin"
+        },
+        {
+            "id": 6,
+            "img": "assets/img/cars/bmw.jpg",
+            "name": "for BMW",
+            "slug": "bmw",
+            "title": "We Ensure Best Travel Logistics Service",
+            "author": "Admin"
+        },
+        {
+            "id": 7,
+            "img": "assets/img/cars/cupra.jpg",
+            "name": "for Cupra",
+            "slug": "cupra",
+            "title": "We Ensure Best Travel Logistics Service",
+            "author": "Admin"
+        },
+        {
+            "id": 8,
+            "img": "assets/img/cars/dodge.jpg",
+            "name": "for Dodge",
+            "slug": "dodge",
+            "title": "We Ensure Best Travel Logistics Service",
+            "author": "Admin"
+        },
+        {
+            "id": 9,
+            "img": "assets/img/cars/ferrari.jpg",
+            "name": "for Ferrari",
+            "slug": "ferrari",
+            "title": "We Ensure Best Travel Logistics Service",
+            "author": "Admin"
+        },
+        {
+            "id": 10,
+            "img": "assets/img/cars/jaguar.jpg",
+            "name": "for Jaguar",
+            "slug": "jaguar",
+            "title": "We Ensure Best Travel Logistics Service",
+            "author": "Admin"
+        },
+        {
+            "id": 11,
+            "img": "assets/img/cars/lotus.jpg",
+            "name": "for Lotus",
+            "slug": "lotus",
+            "title": "We Ensure Best Travel Logistics Service",
+            "author": "Admin"
+        },
+        {
+            "id": 12,
+            "img": "assets/img/cars/lamborghini.jpg",
+            "name": "for Lamborghini",
+            "slug": "lamborghini",
+            "title": "We Ensure Best Travel Logistics Service",
+            "author": "Admin"
+        },
+        {
+            "id": 13,
+            "img": "assets/img/cars/maserati.jpg",
+            "name": "for Maserati",
+            "slug": "maserati",
+            "title": "We Ensure Best Travel Logistics Service",
+            "author": "Admin"
+        },
+        {
+            "id": 14,
+            "img": "assets/img/cars/mclaren.jpg",
+            "name": "for McLaren",
+            "slug": "mclaren",
+            "title": "We Ensure Best Travel Logistics Service",
+            "author": "Admin"
+        },
+        {
+            "id": 15,
+            "img": "assets/img/cars/mercedes.jpg",
+            "name": "for Mercedes",
+            "slug": "mercedes",
+            "title": "We Ensure Best Travel Logistics Service",
+            "author": "Admin"
+        },
+        {
+            "id": 16,
+            "img": "assets/img/cars/nissan.jpg",
+            "name": "for Nissan",
+            "slug": "nissan",
+            "title": "We Ensure Best Travel Logistics Service",
+            "author": "Admin"
+        },
+        {
+            "id": 17,
+            "img": "assets/img/cars/pagani.jpg",
+            "name": "for Pagani",
+            "slug": "pagani",
+            "title": "We Ensure Best Travel Logistics Service",
+            "author": "Admin"
+        },
+        {
+            "id": 18,
+            "img": "assets/img/cars/porsche.jpg",
+            "name": "for Porsche",
+            "slug": "porsche",
+            "title": "We Ensure Best Travel Logistics Service",
+            "author": "Admin"
+        },
+        {
+            "id": 19,
+            "img": "assets/img/cars/toyota.jpg",
+            "name": "for Toyota",
+            "slug": "toyota",
+            "title": "We Ensure Best Travel Logistics Service",
+            "author": "Admin"
+        },
+        {
+            "id": 20,
+            "img": "assets/img/cars/rolls.jpg",
+            "name": "for Rolls Royce Cullinan",
+            "slug": "rolls-royce-cullinan",
+            "title": "We Ensure Best Travel Logistics Service",
+            "author": "Admin"
+        },
+        {
+            "id": 21,
+            "img": "assets/img/cars/spare-parts-car.jpg",
+            "name": "Zubehör",
+            "slug": "zubehör",
+            "title": "We Ensure Best Travel Logistics Service",
+            "author": "Admin"
+        }
+    ]
+}

@@ -1,8 +1,13 @@
 import { configureStore } from '@reduxjs/toolkit';
-import counterReducer from '../features/counter/counterSlice';
+import { carApi } from '../features/car/CarApi';
 
 export const store = configureStore({
   reducer: {
-    counter: counterReducer,
+    // Add the generated reducer as a specific top-level slice
+    [carApi.reducerPath]: carApi.reducer,
   },
+  // Adding the api middleware enables caching, invalidation, polling,
+  // and other useful features of `rtk-query`.
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware().concat(carApi.middleware),
 });

@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { Link, NavLink } from 'react-router-dom'
+import { Link, NavLink, useLocation } from 'react-router-dom'
 
 const Header = () => {
   // Sticky Menu Area
@@ -10,6 +10,7 @@ const Header = () => {
     };
   });
 
+  const location = useLocation();
 
   /* Method that will fix header after a specific scrollable */
   const isSticky = (e) => {
@@ -19,7 +20,7 @@ const Header = () => {
   };
 
   return (
-    <header className="capristo-main-header-area dark_themes">
+    <header className={`capristo-main-header-area ${(location.pathname === "/" || location.pathname === "/contact" || location.pathname === "/partner") ? "light_themes" : "dark_themes"}`}>
       <div className="container-fluid">
         <div className="row">
           <div className="col-md-12">

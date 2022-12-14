@@ -12,7 +12,7 @@ const options = {
   dots: false,
   autoplayTimeout: 6000,
   autoplaySpeed: 1200,
-  navText: ["<img src='assets/img/left-chevron-black.png' class='left-img' alt='left'/>", "<img src='assets/img/right-chevron-black.png' class='right-img' alt='right'/>"],
+  navText: ["<img src='assets/img/left-chevron-black.png' alt='left'/>", "<img src='assets/img/right-chevron-black.png' alt='right'/>"],
   responsive: {
     0: {
       items: 1
@@ -42,7 +42,7 @@ const options2 = {
   dots: false,
   autoplayTimeout: 7000,
   autoplaySpeed: 1500,
-  navText: ["<img src='assets/img/left-chevron.png' class='left-img' alt='left'/>", "<img src='assets/img/right-chevron.png' class='right-img' alt='right'/>"],
+  navText: ["<img src='assets/img/left-chevron.png' alt='left'/>", "<img src='assets/img/right-chevron.png' alt='right'/>"],
   responsive: {
     0: {
       items: 1
