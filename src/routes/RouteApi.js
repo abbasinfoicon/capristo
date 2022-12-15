@@ -20,6 +20,7 @@ import ModelsCarbon from '../views/ModelsCarbon'
 import Parts from '../views/Parts'
 import Dark from '../layouts/Dark'
 import Light from '../layouts/Light'
+import CarbonModels from '../views/CarbonModels'
 
 const RouteApi = () => {
 
@@ -30,9 +31,11 @@ const RouteApi = () => {
             <Route path="/contact" element={<Light><Contact /></Light>} />
 
             <Route path="/car-list" element={<Dark><CarList /></Dark>} />
-            <Route path="/car-list/:slug" element={<Light><Car /></Light>} />
-            <Route path='/car-list/:slug/models' element={<Dark><Models /></Dark>} />
-            <Route path='/parts' element={<Parts />} />
+            <Route path="/:slug" element={<Light><Car /></Light>} />
+            <Route path='/:slug/models' element={<Dark><Models /></Dark>} />
+            <Route path='/:slug/:slug-models' element={<Dark><CarbonModels /></Dark>} />
+
+
             <Route path='/model-parts' element={<ModelParts />} />
             <Route path='/model-details' element={<ModelDetails />} />
             <Route path='/models-carbon' element={<ModelsCarbon />} />
