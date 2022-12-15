@@ -6303,3 +6303,13 @@ body.header_fixed.dark_themes.bg_transparent header.capristo-main-header-area.fi
 	font-size: 24px;
 	color: #fff;
 }
+
+a.popup-youtube {
+    height: 100%;
+}
+
+a.popup-youtube img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}

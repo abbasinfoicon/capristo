@@ -11,13 +11,14 @@ export const carApi = createApi({
             url: "carList",
             method: 'GET'
         }),
-        getSingleCar: builder.query({
-            query: (name) => ({
-                url: `services/${name}`,
-                method: 'GET'
-            }),
-        }),
-    })
+    }),
+    
+    getSingleCar: builder.query({
+      query: (slug) => ({
+          url: `carList/?slug=${slug}`,
+          method: 'GET'
+      }),
+  }),
   }),
 })
 

@@ -18,31 +18,33 @@ import Shop from '../views/Shop'
 import ModelDetails from '../views/ModelDetails'
 import ModelsCarbon from '../views/ModelsCarbon'
 import Parts from '../views/Parts'
+import Dark from '../layouts/Dark'
+import Light from '../layouts/Light'
 
 const RouteApi = () => {
+
     return (
         <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/contact" element={<Contact />} />
+            <Route path="/" element={<Light><Home /></Light>} />
+            <Route path="/about" element={<Dark><About /></Dark>} />
+            <Route path="/contact" element={<Light><Contact /></Light>} />
 
-
-            <Route path="/car-list" element={<CarList />} />
-            <Route path="/car" element={<Car />} />
-            <Route path='/models' element={<Models />} />
+            <Route path="/car-list" element={<Dark><CarList /></Dark>} />
+            <Route path="/car-list/:slug" element={<Light><Car /></Light>} />
+            <Route path='/car-list/:slug/models' element={<Dark><Models /></Dark>} />
             <Route path='/parts' element={<Parts />} />
             <Route path='/model-parts' element={<ModelParts />} />
             <Route path='/model-details' element={<ModelDetails />} />
             <Route path='/models-carbon' element={<ModelsCarbon />} />
 
-            <Route path="/shop" element={<Shop />} />
-            <Route path="/blog" element={<Blog />} />
-            <Route path="/partner" element={<Partner />} />
-            <Route path="/career" element={<Career />} />
-            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-            <Route path="/cookie-policy" element={<CookiePolicy />} />
-            <Route path="/impressum" element={<Impressum />} />
-            <Route path="*" element={<PageNotFound />} />
+            <Route path="/shop" element={<Dark><Shop /></Dark>} />
+            <Route path="/blog" element={<Dark><Blog /></Dark>} />
+            <Route path="/partner" element={<Light><Partner /></Light>} />
+            <Route path="/career" element={<Dark><Career /></Dark>} />
+            <Route path="/privacy-policy" element={<Dark><PrivacyPolicy /></Dark>} />
+            <Route path="/cookie-policy" element={<Dark><CookiePolicy /></Dark>} />
+            <Route path="/impressum" element={<Dark><Impressum /></Dark>} />
+            <Route path="*" element={<Dark><PageNotFound /></Dark>} />
         </Routes>
     )
 }

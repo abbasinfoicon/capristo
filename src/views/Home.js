@@ -1,5 +1,7 @@
-import React, { useState } from 'react'
+import React, { useEffect } from 'react'
 import OwlCarousel from 'react-owl-carousel';
+import { useDispatch } from 'react-redux';
+import { changeTheme } from '../reducers/theme';
 
 const options = {
   animateOut: 'fadeOutLeft',
@@ -37,6 +39,10 @@ const options = {
 }
 
 const Home = () => {
+  const dispatch = useDispatch()
+  useEffect(() => {
+    dispatch(changeTheme('light_themes'))
+  }, [])
   return (
     <>
       <section className="capristo-slider-area fix">

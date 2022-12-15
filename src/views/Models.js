@@ -1,135 +1,45 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
+import { useGetSingleCarQuery } from '../features/car/CarApi'
 
 const Models = () => {
-  return (
-    <section className="cars-list-area marginTop-110px">
-        <div className="container-fluid">
-            <div className="row">
-                <div className="col-md-12 text-center">
-                    <div className="car-img-name">
-                        <div className="img-style">
-                            <Link to='/parts'><img src="assets/img/cars/alfa-romeo.jpg"
-                                    alt="" className="img-fluid"/></Link>
-                        </div>
+    const params = useParams();
+    const { data, isError, isLoading } = useGetSingleCarQuery(params.slug);
+    // console.log("All Data ", data);
+    // console.log("Models Data ", data.models);
 
-                        <h3><Link to='/parts'>288 GTO</Link></h3>
-                    </div>
-                </div>
+    return (
+        <section className="cars-list-area marginTop-110px">
+            <div className="container-fluid">
+                <div className="row">
+                    {isError ? (
+                        <p className='iserror'>Oh no, there was an error</p>
+                    ) : isLoading ? (
+                        <p className='isloading'>Loading...</p>
+                    ) : data ? (
+                        <>
+                            {
+                                data[0].models.map((item, index) => {
 
-                <div className="col-md-12 text-center">
-                    <div className="car-img-name">
-                        <div className="img-style">
-                            <Link to='/parts'><img
-                                    src="assets/img/cars/aston-martin.jpg" alt="" className="img-fluid"/></Link>
-                        </div>
+                                    return (
+                                        <div className="col-md-12 text-center" key={index}>
+                                            <div className="car-img-name">
+                                                <div className="img-style">
+                                                    <Link to='/parts'><img src={item.img} alt="" className="img-fluid" /></Link>
+                                                </div>
 
-                        <h3><Link to='/parts'>308 Models</Link></h3>
-                    </div>
-                </div>
-
-                <div className="col-md-12 text-center">
-                    <div className="car-img-name">
-                        <div className="img-style">
-                            <Link to='/parts'><img src="assets/img/cars/audi.jpg"
-                                    alt="" className="img-fluid"/></Link>
-                        </div>
-
-                        <h3><Link to='/parts'>Mondial 3.2</Link></h3>
-                    </div>
-                </div>
-
-                <div className="col-md-12 text-center">
-                    <div className="car-img-name">
-                        <div className="img-style">
-                            <Link to='/parts'><img src="assets/img/cars/bentley.jpg"
-                                    alt="" className="img-fluid"/></Link>
-                        </div>
-
-                        <h3><Link to='/parts'>348</Link></h3>
-                    </div>
-                </div>
-
-                <div className="col-md-12 text-center">
-                    <div className="car-img-name">
-                        <div className="img-style">
-                            <Link to='/parts'><img src="assets/img/cars/bentley.jpg"
-                                    alt="" className="img-fluid"/></Link>
-                        </div>
-
-                        <h3><Link to='/parts'>355</Link></h3>
-                    </div>
-                </div>
-
-                <div className="col-md-12 text-center">
-                    <div className="car-img-name">
-                        <div className="img-style">
-                            <Link to='/parts'><img src="assets/img/cars/chevrolet.jpg"
-                                    alt="" className="img-fluid"/></Link>
-                        </div>
-
-                        <h3><Link to='/parts'>360</Link></h3>
-                    </div>
-                </div>
-
-                <div className="col-md-12 text-center">
-                    <div className="car-img-name">
-                        <div className="img-style">
-                            <Link to='/parts'><img src="assets/img/cars/bmw.jpg" alt=""
-                                    className="img-fluid"/></Link>
-                        </div>
-
-                        <h3><Link to='/parts'>430 Models</Link></h3>
-                    </div>
-                </div>
-
-                <div className="col-md-12 text-center">
-                    <div className="car-img-name">
-                        <div className="img-style">
-                            <Link to='/parts'><img src="assets/img/cars/cupra.jpg"
-                                    alt="" className="img-fluid"/></Link>
-                        </div>
-
-                        <h3><Link to='/parts'>458 Models</Link></h3>
-                    </div>
-                </div>
-
-                <div className="col-md-12 text-center">
-                    <div className="car-img-name">
-                        <div className="img-style">
-                            <Link to='/parts'><img src="assets/img/cars/dodge.jpg"
-                                    alt="" className="img-fluid"/></Link>
-                        </div>
-
-                        <h3><Link to='/parts'>488 Models</Link></h3>
-                    </div>
-                </div>
-
-                <div className="col-md-12 text-center">
-                    <div className="car-img-name">
-                        <div className="img-style">
-                            <Link to='/parts'><img src="assets/img/cars/ferrari.jpg"
-                                    alt="" className="img-fluid"/></Link>
-                        </div>
-
-                        <h3><Link to='/parts'>550 / 557 Maranello</Link></h3>
-                    </div>
-                </div>
-
-                <div className="col-md-12 text-center">
-                    <div className="car-img-name">
-                        <div className="img-style">
-                            <Link to='/parts'><img src="assets/img/cars/jaguar.jpg"
-                                    alt="" className="img-fluid"/></Link>
-                        </div>
-
-                        <h3><Link to='/parts'>Testarossa</Link></h3>
-                    </div>
+                                                <h3><Link to='/parts'>{item.name}</Link></h3>
+                                            </div>
+                                        </div>
+                                    )
+                                })
+                            }
+                        </>
+                    ) : <>NOT DATA</>}
                 </div>
             </div>
-        </div>
-    </section>
-  )
+        </section>
+    )
 }
 
 export default Models

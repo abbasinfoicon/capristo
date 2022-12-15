@@ -1,19 +1,23 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+
 import { Link } from 'react-router-dom'
 import { useGetAllCarQuery } from '../features/car/CarApi'
+
 
 const CarList = () => {
   const carList = useGetAllCarQuery();
   // console.log("Data ", carList.data);
+
+
 
   return (
     <section className="cars-list-area marginTop-110px">
       <div className="container-fluid">
         <div className="row">
           {carList.isError ? (
-            <>Oh no, there was an error</>
+            <p className='iserror'>Oh no, there was an error</p>
           ) : carList.isLoading ? (
-            <>Loading...</>
+            <p className='isloading'>Loading...</p>
           ) : carList.data ? (
             <>
               {
