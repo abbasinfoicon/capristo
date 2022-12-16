@@ -19,8 +19,7 @@ const CarbonModels = () => {
                     ) : data ? (
                         <>
                             {
-                                data[0].models.map((item, index) => {
-
+                                data[0].carbon.map((item, index) => {
                                     return (
                                         <div className="col-md-12 text-center" key={index}>
                                             <div className="car-img-name">

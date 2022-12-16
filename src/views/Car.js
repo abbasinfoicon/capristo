@@ -25,8 +25,8 @@ const Car = () => {
                                     </a>
 
                                     <div className="btns-link">
-                                        <Link to={`/${slug}/models`}>Explore Exhausts Systems <i className="fa fa-plus"></i></Link>
-                                        <Link to={`/${slug}/${slug}-models`}>Explore Carbon Parts <i className="fa fa-plus"></i></Link>
+                                        <Link to={`/${slug}/${slug}-exhausts`}>Explore Exhausts Systems <i className="fa fa-plus"></i></Link>
+                                        <Link to={`/${slug}/${slug}-carbon`}>Explore Carbon Parts <i className="fa fa-plus"></i></Link>
                                     </div>
                                 </div>
                             )

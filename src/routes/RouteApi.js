@@ -9,7 +9,7 @@ import Contact from '../views/Contact'
 import CookiePolicy from '../views/CookiePolicy'
 import Home from '../views/Home'
 import Impressum from '../views/Impressum'
-import Models from '../views/Models'
+import ExhaustsModels from '../views/ExhaustsModels'
 import ModelParts from '../views/ModelParts'
 import PageNotFound from '../views/PageNotFound'
 import Partner from '../views/Partner'
@@ -17,10 +17,10 @@ import PrivacyPolicy from '../views/PrivacyPolicy'
 import Shop from '../views/Shop'
 import ModelDetails from '../views/ModelDetails'
 import ModelsCarbon from '../views/ModelsCarbon'
-import Parts from '../views/Parts'
 import Dark from '../layouts/Dark'
 import Light from '../layouts/Light'
 import CarbonModels from '../views/CarbonModels'
+import CarDetails from '../views/CarDetails'
 
 const RouteApi = () => {
 
@@ -32,8 +32,10 @@ const RouteApi = () => {
 
             <Route path="/car-list" element={<Dark><CarList /></Dark>} />
             <Route path="/:slug" element={<Light><Car /></Light>} />
-            <Route path='/:slug/models' element={<Dark><Models /></Dark>} />
-            <Route path='/:slug/:slug-models' element={<Dark><CarbonModels /></Dark>} />
+            <Route path='/:slug/:slug-exhausts' element={<Dark><ExhaustsModels /></Dark>} />
+            <Route path='/:slug/:slug-exhausts/:name' element={<Dark><CarDetails /></Dark>} />
+            <Route path='/:slug/:slug-carbon' element={<Dark><CarbonModels /></Dark>} /> 
+            <Route path='/:slug/:slug-carbon/:name' element={<Dark><CarbonModels /></Dark>} /> 
 
 
             <Route path='/model-parts' element={<ModelParts />} />
