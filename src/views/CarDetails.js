@@ -132,10 +132,10 @@ const CarDetails = () => {
             ) : data ? (
                 <>
                     {
-                        data[0].exhausts[0].models.map(({ id, product, artNo, img, desc, price, eceApproval, soundLavel, soundLavelComb250, soundLavelComb100, video, videobg }) => {
+                        data[0].exhausts[0].models.map(({ id, product, artNo, img, desc, price, eceApproval, soundLavel, soundLavelComb250, soundLavelComb100, video, videobg }, index) => {
                             return (
                                 <>
-                                    <section className="product-details-area bg_white" key={id}>
+                                    <section className={(index + 1) % 2 == 0 ? "product-details-area ptb-50 bg_gray" : "product-details-area bg_white"} key={id}>
                                         <div className="container">
                                             <div className="row">
                                                 <div className="col-md-4">
