@@ -6226,8 +6226,14 @@ body.header_fixed.dark_themes.bg_transparent header.capristo-main-header-area.fi
 	padding-top: 30px;
 }
 .parts_sec .car_img {
+	height: 266px;
+    overflow: hidden;
+	min-width: 314px;
 }
 .parts_sec .car_img img {
+	height: 100%;
+	object-fit: cover;
+	width: 100%;
 }
 .parts_sec .car_dtl {
 	width: 100%;
@@ -6271,6 +6277,7 @@ body.header_fixed.dark_themes.bg_transparent header.capristo-main-header-area.fi
 	font-size: 24px;
 	font-weight: normal;
 	color: #fff;
+	text-transform: capitalize;
 }
 
 /*---------------------------------------

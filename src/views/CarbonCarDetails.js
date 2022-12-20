@@ -107,7 +107,7 @@ const CarbonCarDetails = () => {
                                 <div className="row">
                                     <div className="col-md-12">
                                         <ul className="tab">
-                                            {Object.keys(carbon).map((key) => {
+                                            {Object.keys(carbon).map((key,index) => {
                                                 if (
                                                     key != "id" &&
                                                     key != "name" &&
@@ -115,8 +115,8 @@ const CarbonCarDetails = () => {
                                                     key != "slug"
                                                 ) {
                                                     return (
-                                                        <li>
-                                                            <a href={`#${key}`}>{key} Parts</a>
+                                                        <li key={index}>
+                                                            <Link to={`#${key}`}>{key} Parts</Link>
                                                         </li>
                                                     );
                                                 }
@@ -127,7 +127,7 @@ const CarbonCarDetails = () => {
                             </div>
                         </div>
 
-                        {Object.keys(carbon).map((key) => {
+                        {Object.keys(carbon).map((key, index) => {
                             if (
                                 key != "id" &&
                                 key != "name" &&
@@ -135,7 +135,7 @@ const CarbonCarDetails = () => {
                                 key != "slug"
                             ) {
                                 return (
-                                    <div className="car-parts bg_gray" id={key}>
+                                    <div className="car-parts bg_gray" key={key} id={key}>
                                         <div className="bg_gray_title">
                                             <div className="container">
                                                 <div className="row">
@@ -153,9 +153,9 @@ const CarbonCarDetails = () => {
                                             <div className="row">
                                                 <div className="col-md-12">
                                                     {
-                                                        carbon[key].map((item, i) => {
+                                                        carbon[key].map((item) => {
                                                             return (
-                                                                <div className="parts_sec" key={i}>
+                                                                <div className="parts_sec" key={item.id}>
                                                                     <div className="car_img">
                                                                         <img src={item.img} alt={item.productName} className="img-fluid" />
                                                                     </div>
