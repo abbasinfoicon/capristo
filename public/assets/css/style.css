@@ -3081,10 +3081,10 @@ header.capristo-main-header-area.fixed .container-fluid {
 
 .footer-top-area {
 	padding: 50px 0 15px;
-	background: url(../img/footer-bg.jpg) no-repeat scroll 0 0 / cover;
+	/* background: url(../img/footer-bg.jpg) no-repeat scroll 0 0 / cover; */
 	position: relative;
 	z-index: 1;
-	background: #000000;
+	background: transparent;
 	border-top: 6px solid #e93024;
 }
 

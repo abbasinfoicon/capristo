@@ -1,7 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { useGetCareerQuery } from '../features/career/CareerApi';
 
 const Career = () => {
+  const careerDetails = useGetCareerQuery();
+
   return (
     <section className="page-area pt-30 pb-30 bg_gray2 marginTop-110px">
       <div className="container">
@@ -20,59 +23,33 @@ const Career = () => {
               <h4>Current Opening</h4>
             </div>
           </div>
-
-          <div className="col-md-6">
-            <div className="jop_des">
-              <Link to='/'>
-                <div className="icon">
-                  <img src="assets/img/places.png" alt="MapMarker" className="img-fluid" />
-                </div>
-                <div className="des">
-                  <h3>Jop Possition Name</h3>
-                  <p>Kalmecke 5, 59845 Sundern</p>
-                </div>
-              </Link>
-            </div>
-          </div>
-          <div className="col-md-6">
-            <div className="jop_des">
-              <Link to='/'>
-                <div className="icon">
-                  <img src="assets/img/places.png" alt="MapMarker" className="img-fluid" />
-                </div>
-                <div className="des">
-                  <h3>Jop Possition Name</h3>
-                  <p>Kalmecke 5, 59845 Sundern</p>
-                </div>
-              </Link>
-            </div>
-          </div>
-          <div className="col-md-6">
-            <div className="jop_des">
-              <Link to='/'>
-                <div className="icon">
-                  <img src="assets/img/places.png" alt="MapMarker" className="img-fluid" />
-                </div>
-                <div className="des">
-                  <h3>Jop Possition Name</h3>
-                  <p>Kalmecke 5, 59845 Sundern</p>
-                </div>
-              </Link>
-            </div>
-          </div>
-          <div className="col-md-6">
-            <div className="jop_des">
-              <Link to='/'>
-                <div className="icon">
-                  <img src="assets/img/places.png" alt="MapMarker" className="img-fluid" />
-                </div>
-                <div className="des">
-                  <h3>Jop Possition Name</h3>
-                  <p>Kalmecke 5, 59845 Sundern</p>
-                </div>
-              </Link>
-            </div>
-          </div>
+          {careerDetails.isError ? (
+            <p className='iserror'>Oh no, there was an error</p>
+          ) : careerDetails.isLoading ? (
+            <p className='isloading'>Loading...</p>
+          ) : careerDetails.data ? (
+            <>
+              {
+                careerDetails.data.map(({ postion, location }, index) => {
+                  return (
+                    <div className="col-md-6">
+                      <div className="jop_des">
+                        <Link to='/'>
+                          <div className="icon">
+                            <img src="assets/img/places.png" alt="MapMarker" className="img-fluid" />
+                          </div>
+                          <div className="des">
+                            <h3>{postion}</h3>
+                            <p>{location}</p>
+                          </div>
+                        </Link>
+                      </div>
+                    </div>
+                  )
+                })
+              }
+            </>
+          ) : <>NOT DATA</>}
 
           <div className="btn-block text-center">
             <Link to='/' className="btn btn-cst">Apply Now</Link>
