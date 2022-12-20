@@ -64,7 +64,7 @@ const options2 = {
     }
 }
 
-const CarDetails = () => {
+const ExhaustCarDetails = () => {
     const params = useParams();
 
     const { data, isError, isLoading } = useGetSingleCarQuery(params.slug);
@@ -134,8 +134,8 @@ const CarDetails = () => {
                     {
                         data[0].exhausts[0].models.map(({ id, product, artNo, img, desc, price, eceApproval, soundLavel, soundLavelComb250, soundLavelComb100, video, videobg }, index) => {
                             return (
-                                <>
-                                    <section className={(index + 1) % 2 == 0 ? "product-details-area ptb-50 bg_gray" : "product-details-area bg_white"} key={id}>
+                                <section key={id}>
+                                    <div className={(index + 1) % 2 == 0 ? "product-details-area ptb-50 bg_gray" : "product-details-area bg_white"}>
                                         <div className="container">
                                             <div className="row">
                                                 <div className="col-md-4">
@@ -174,28 +174,28 @@ const CarDetails = () => {
                                                 </div>
                                             </div>
                                         </div>
-                                    </section>
+                                    </div>
 
                                     {(video === '') ? "" : (
 
-                                      <section className="facts-page-area section_70">
-                                        <div className="container">
-                                            <div className="row align-items-center">
-                                                <div className="col-lg-12">
-                                                    <div className="about-page-right">
-                                                        <div className="video_wrapper video_wrapper_full js-videoWrapper">
-                                                            <a className="popup-youtube" href={video}>
-                                                                <img src={videobg} alt={videobg} className="img-fluid" />
-                                                            </a>
+                                        <div className="facts-page-area section_70">
+                                            <div className="container">
+                                                <div className="row align-items-center">
+                                                    <div className="col-lg-12">
+                                                        <div className="about-page-right">
+                                                            <div className="video_wrapper video_wrapper_full js-videoWrapper">
+                                                                <a className="popup-youtube" href={video}>
+                                                                    <img src={videobg} alt={videobg} className="img-fluid" />
+                                                                </a>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </section>
                                     )
                                     }
-                                </>
+                                </section>
                             )
                         })
                     }
@@ -294,4 +294,4 @@ const CarDetails = () => {
     )
 }
 
-export default CarDetails
+export default ExhaustCarDetails

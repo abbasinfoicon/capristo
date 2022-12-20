@@ -9,7 +9,6 @@ const Car = () => {
 
     return (
         <section className="video-page-area">
-            <p>(Video: Ferrari with Capristo products (no sound) )</p>
             {isError ? (
                 <p className='iserror'>Oh no, there was an error</p>
             ) : isLoading ? (
@@ -17,16 +16,19 @@ const Car = () => {
             ) : data ? (
                 <>
                     {
-                        data.map(({ id, img, slug }) => {
+                        data.map(({ id, img, slug, name }) => {
                             return (
-                                <div className="video_wrapper video_wrapper_full js-videoWrapper" key={id}>
-                                    <a className="popup-youtube" href="https://www.youtube.com/watch?v=rDE4il6JC4U">
-                                        <img src={"/" + img} alt="" className="img-fluid" />
-                                    </a>
+                                <div key={id}>
+                                    <p>(Video: {name} with Capristo products (no sound) )</p>
+                                    <div className="video_wrapper video_wrapper_full js-videoWrapper">
+                                        <a className="popup-youtube" href="https://www.youtube.com/watch?v=rDE4il6JC4U">
+                                            <img src={"/" + img} alt="" className="img-fluid" />
+                                        </a>
 
-                                    <div className="btns-link">
-                                        <Link to={`/${slug}/${slug}-exhausts`}>Explore Exhausts Systems <i className="fa fa-plus"></i></Link>
-                                        <Link to={`/${slug}/${slug}-carbon`}>Explore Carbon Parts <i className="fa fa-plus"></i></Link>
+                                        <div className="btns-link">
+                                            <Link to={`/${slug}/${slug}-exhausts`}>Explore Exhausts Systems <i className="fa fa-plus"></i></Link>
+                                            <Link to={`/${slug}/${slug}-carbon`}>Explore Carbon Parts <i className="fa fa-plus"></i></Link>
+                                        </div>
                                     </div>
                                 </div>
                             )

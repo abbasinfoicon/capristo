@@ -1,88 +1,12 @@
-import React, { useEffect } from 'react'
-import OwlCarousel from 'react-owl-carousel';
-import { useDispatch } from 'react-redux';
-import { changeTheme } from '../reducers/theme';
-
-const options = {
-  animateOut: 'fadeOutLeft',
-  animateIn: 'fadeIn',
-  items: 2,
-  nav: true,
-  dots: false,
-  autoplayTimeout: 9000,
-  autoplaySpeed: 5000,
-  autoplay: true,
-  loop: true,
-  navText: ["<img src='assets/img/prev-1.png'>", "<img src='assets/img/next-1.png'>"],
-  mouseDrag: true,
-  touchDrag: true,
-  responsive: {
-    0: {
-      items: 1
-    },
-    480: {
-      items: 1
-    },
-    600: {
-      items: 1
-    },
-    750: {
-      items: 1
-    },
-    1000: {
-      items: 1
-    },
-    1200: {
-      items: 1
-    }
-  }
-}
+import React from 'react'
+import { Link } from 'react-router-dom';
+import HomeSlider from '../components/templates/HomeSlider';
 
 const Home = () => {
-  const dispatch = useDispatch()
-  useEffect(() => {
-    dispatch(changeTheme('light_themes'))
-  }, [])
   return (
     <>
       <section className="capristo-slider-area fix">
-        <OwlCarousel className="capristo-slide" {...options}>
-          <div className="capristo-main-slide" style={{ backgroundImage: 'url(assets/img/slider/slider1.jpg)' }}>
-            <div className="capristo-main-caption">
-              <div className="capristo-caption-cell">
-                <div className="container">
-                  <div className="row">
-                    <div className="col-md-10">
-                      <div className="slider-text">
-                        <h2>Ferrari Roma <br />Capristo carbon fiber parts</h2>
-                        <p>Elegance in Motion...</p>
-                        <div className="line"></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="capristo-main-slide" style={{ backgroundImage: 'url(assets/img/slider/slider2.jpg)' }}>
-            <div className="capristo-main-caption">
-              <div className="capristo-caption-cell">
-                <div className="container">
-                  <div className="row">
-                    <div className="col-md-10">
-                      <div className="slider-text">
-                        <h2>Ferrari Roma <br />Capristo carbon fiber parts</h2>
-                        <p>Elegance in Motion...</p>
-                        <div className="line"></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </OwlCarousel>
+        <HomeSlider />
       </section>
 
       <section className="about-page-area section_70 bg_gray">
@@ -115,8 +39,8 @@ const Home = () => {
                   doloribus ipsum, accusantium provident?</p>
 
                 <div className="btn-block mt-5">
-                  <a href="#" className="btn btn-cst">Explore Carbon Design</a>
-                  <a href="#" className="btn btn-cst">Explore Exhaust Design</a>
+                  <Link to='/car-list' className="btn btn-cst">Explore Carbon Design</Link>
+                  <Link to='/car-list' className="btn btn-cst">Explore Exhaust Design</Link>
                 </div>
               </div>
             </div>

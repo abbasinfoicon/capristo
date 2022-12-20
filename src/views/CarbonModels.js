@@ -24,10 +24,10 @@ const CarbonModels = () => {
                                         <div className="col-md-12 text-center" key={index}>
                                             <div className="car-img-name">
                                                 <div className="img-style">
-                                                    <Link to='/parts'><img src={item.img} alt="" className="img-fluid" /></Link>
+                                                    <Link to={`/${params.slug}/${params.slug}-carbon/${item.slug}`}><img src={item.img} alt="" className="img-fluid" /></Link>
                                                 </div>
 
-                                                <h3><Link to='/parts'>{item.name}</Link></h3>
+                                                <h3><Link to={`/${params.slug}/${params.slug}-carbon/${item.slug}`}>{item.name}</Link></h3>
                                             </div>
                                         </div>
                                     )

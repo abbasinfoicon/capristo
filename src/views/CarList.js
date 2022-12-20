@@ -6,7 +6,6 @@ import { useGetAllCarQuery } from '../features/car/CarApi'
 
 const CarList = () => {
   const carList = useGetAllCarQuery();
-  // console.log("Data ", carList.data);
 
 
 
