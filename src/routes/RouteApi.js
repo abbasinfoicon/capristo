@@ -10,18 +10,17 @@ import CookiePolicy from '../views/CookiePolicy'
 import Home from '../views/Home'
 import Impressum from '../views/Impressum'
 import ExhaustsModels from '../views/ExhaustsModels'
-import ModelParts from '../views/ModelParts'
 import PageNotFound from '../views/PageNotFound'
 import Partner from '../views/Partner'
 import PrivacyPolicy from '../views/PrivacyPolicy'
 import Shop from '../views/Shop'
-import ModelDetails from '../views/ModelDetails'
-import ModelsCarbon from '../views/ModelsCarbon'
 import Dark from '../layouts/Dark'
 import Light from '../layouts/Light'
 import CarbonModels from '../views/CarbonModels'
 import ExhaustCarDetails from '../views/ExhaustCarDetails'
 import CarbonCarDetails from '../views/CarbonCarDetails'
+import ExhaustCarParts from '../views/ExhaustCarParts'
+import ExhaustCarPartsDetails from '../views/ExhaustCarPartsDetails'
 
 const RouteApi = () => {
 
@@ -33,15 +32,15 @@ const RouteApi = () => {
 
             <Route path="/car-list" element={<Dark><CarList /></Dark>} />
             <Route path="/:slug" element={<Light><Car /></Light>} />
-            <Route path='/:slug/:slug-exhausts' element={<Dark><ExhaustsModels /></Dark>} />
-            <Route path='/:slug/:slug-exhausts/:name' element={<Dark><ExhaustCarDetails /></Dark>} />
-            <Route path='/:slug/:slug-carbon' element={<Dark><CarbonModels /></Dark>} /> 
-            <Route path='/:slug/:slug-carbon/:name' element={<Light><CarbonCarDetails /></Light>} /> 
+            
+            <Route path='/:slug/:slugExhausts' element={<Dark><ExhaustsModels /></Dark>} />
+            <Route path='/:slug/:slugExhausts/:name' element={<Dark><ExhaustCarDetails /></Dark>} />
+            <Route path='/:slug/:slugExhausts/:name/:part' element={<Dark><ExhaustCarParts /></Dark>} /> 
+            <Route path='/:slug/:slugExhausts/:name/:part/:partName' element={<Dark><ExhaustCarPartsDetails /></Dark>} /> 
 
+            <Route path='/:slug/:slugCarbon' element={<Dark><CarbonModels /></Dark>} /> 
+            <Route path='/:slug/:slugCarbon/:name' element={<Light><CarbonCarDetails /></Light>} /> 
 
-            <Route path='/model-parts' element={<ModelParts />} />
-            <Route path='/model-details' element={<ModelDetails />} />
-            <Route path='/models-carbon' element={<ModelsCarbon />} />
 
             <Route path="/shop" element={<Dark><Shop /></Dark>} />
             <Route path="/blog" element={<Dark><Blog /></Dark>} />

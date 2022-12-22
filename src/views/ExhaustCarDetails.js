@@ -74,53 +74,32 @@ const ExhaustCarDetails = () => {
             <section className="access-parts-area ptb-50 bg_gray marginTop-110px">
                 <div className="container-fluid">
                     <OwlCarousel className="product-listing" {...options}>
-                        <div className="item">
-                            <div className="car-img-name text-center">
-                                <div className="img-style img_height250">
-                                    <Link to='/model-parts'><img
-                                        src="assets/img/product/img8.png" alt="" className="img-fluid" /></Link>
-                                </div>
+                        {isError ? (
+                            <p className='iserror'>Oh no, there was an error</p>
+                        ) : isLoading ? (
+                            <p className='isloading'>Loading...</p>
+                        ) : data ? (
+                            <>
+                                {
+                                    data[0].exhausts[0].models[0].modelsParts.map(({ id, name, img, slug }, index) => {
+                                        return (
+                                            <div className="item" key={index}>
+                                                <div className="car-img-name text-center">
+                                                    <div className="img-style img_height250">
+                                                        <Link to={`${slug}`}><img
+                                                            src={img} alt="" className="img-fluid" /></Link>
+                                                    </div>
 
-                                <h3><Link to='/model-parts'>Endschalldämpfer</Link>
-                                </h3>
-                            </div>
-                        </div>
+                                                    <h3><Link to={`${slug}`}>{name}</Link>
+                                                    </h3>
+                                                </div>
+                                            </div>
+                                        )
+                                    })
+                                }
+                            </>
 
-                        <div className="item">
-                            <div className="car-img-name text-center">
-                                <div className="img-style img_height250">
-                                    <Link to='/model-parts'><img
-                                        src="assets/img/product/img9.png" alt="" className="img-fluid" /></Link>
-                                </div>
-
-                                <h3><Link to='/model-parts'>Downpipes</Link>
-                                </h3>
-                            </div>
-                        </div>
-
-                        <div className="item">
-                            <div className="car-img-name text-center">
-                                <div className="img-style img_height250">
-                                    <Link to='/model-parts'><img
-                                        src="assets/img/product/img10.png" alt="" className="img-fluid" /></Link>
-                                </div>
-
-                                <h3><Link to='/model-parts'>Zubehör</Link>
-                                </h3>
-                            </div>
-                        </div>
-
-                        <div className="item">
-                            <div className="car-img-name text-center">
-                                <div className="img-style img_height250">
-                                    <Link to='/model-parts'><img
-                                        src="assets/img/product/img8.png" alt="" className="img-fluid" /></Link>
-                                </div>
-
-                                <h3><Link to='/model-parts'>RC-Kit</Link>
-                                </h3>
-                            </div>
-                        </div>
+                        ) : <>NOT DATA</>}
                     </OwlCarousel>
                 </div>
             </section>
