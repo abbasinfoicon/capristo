@@ -125,6 +125,8 @@ const ExhaustCarDetails = () => {
                 </div>
             </section>
 
+            {/* ============================ */}
+
             {isError ? (
                 <p className='iserror'>Oh no, there was an error</p>
             ) : isLoading ? (
@@ -202,6 +204,8 @@ const ExhaustCarDetails = () => {
                 </>
 
             ) : <>NOT DATA</>}
+
+            {/* ============================ */}
 
             <section className="interested">
                 <div className="container">
