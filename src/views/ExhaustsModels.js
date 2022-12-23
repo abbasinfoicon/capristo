@@ -4,7 +4,6 @@ import { useGetSingleCarQuery } from '../features/car/CarApi'
 
 const ExhaustsModels = () => {
     const params = useParams();
-    // console.log(params.slug);
     const { data, isError, isLoading } = useGetSingleCarQuery(params.slug);
     // console.log("All Data ", data);
     // console.log("Models Data ", data.models);
@@ -19,7 +18,7 @@ const ExhaustsModels = () => {
                         <p className='isloading'>Loading...</p>
                     ) : data ? (
                         <>
-                            {
+                            {params.slugExhausts.includes('exhausts') ?
                                 data[0].exhausts.map((item, index) => {
                                     return (
                                         <div className="col-md-12 text-center" key={index}>
@@ -29,6 +28,18 @@ const ExhaustsModels = () => {
                                                 </div>
 
                                                 <h3><Link to={`/${params.slug}/${params.slug}-exhausts/${item.slug}`}>{item.name}</Link></h3>
+                                            </div>
+                                        </div>
+                                    )
+                                }) : data[0].carbon.map((item, index) => {
+                                    return (
+                                        <div className="col-md-12 text-center" key={index}>
+                                            <div className="car-img-name">
+                                                <div className="img-style">
+                                                    <Link to={`/${params.slug}/${params.slug}-carbon/${item.slug}`}><img src={item.img} alt="" className="img-fluid" /></Link>
+                                                </div>
+
+                                                <h3><Link to={`/${params.slug}/${params.slug}-carbon/${item.slug}`}>{item.name}</Link></h3>
                                             </div>
                                         </div>
                                     )

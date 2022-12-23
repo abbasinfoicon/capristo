@@ -2,6 +2,7 @@ import React from 'react'
 import { Link, useParams } from 'react-router-dom'
 import OwlCarousel from 'react-owl-carousel';
 import { useGetSingleCarQuery } from '../features/car/CarApi';
+import CarbonCarDetails from './CarbonCarDetails';
 
 const options = {
     autoplay: true,
@@ -70,7 +71,7 @@ const ExhaustCarDetails = () => {
     const { data, isError, isLoading } = useGetSingleCarQuery(params.slug);
 
     return (
-        <>
+        <> {params.slugExhausts.includes('exhausts') ? <>
             <section className="access-parts-area ptb-50 bg_gray marginTop-110px">
                 <div className="container-fluid">
                     <OwlCarousel className="product-listing" {...options}>
@@ -155,24 +156,25 @@ const ExhaustCarDetails = () => {
                                         </div>
                                     </div>
 
-                                    {(video === '') ? "" : (
+                                    {
+                                        (video === '') ? "" : (
 
-                                        <div className="facts-page-area section_70">
-                                            <div className="container">
-                                                <div className="row align-items-center">
-                                                    <div className="col-lg-12">
-                                                        <div className="about-page-right">
-                                                            <div className="video_wrapper video_wrapper_full js-videoWrapper">
-                                                                <a className="popup-youtube" href={video}>
-                                                                    <img src={videobg} alt={videobg} className="img-fluid" />
-                                                                </a>
+                                            <div className="facts-page-area section_70">
+                                                <div className="container">
+                                                    <div className="row align-items-center">
+                                                        <div className="col-lg-12">
+                                                            <div className="about-page-right">
+                                                                <div className="video_wrapper video_wrapper_full js-videoWrapper">
+                                                                    <a className="popup-youtube" href={video}>
+                                                                        <img src={videobg} alt={videobg} className="img-fluid" />
+                                                                    </a>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                    )
+                                        )
                                     }
                                 </section>
                             )
@@ -181,7 +183,8 @@ const ExhaustCarDetails = () => {
                 </>
 
             ) : <>NOT DATA</>}
-
+        </> : <CarbonCarDetails />
+        }
             <section className="interested">
                 <div className="container">
                     <div className="row">

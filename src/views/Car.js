@@ -6,6 +6,7 @@ const Car = () => {
     const params = useParams();
 
     const { data, isError, isLoading } = useGetSingleCarQuery(params.slug);
+    // console.log("Params ", params.slug);
 
     return (
         <section className="video-page-area">

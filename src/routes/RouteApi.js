@@ -16,9 +16,7 @@ import PrivacyPolicy from '../views/PrivacyPolicy'
 import Shop from '../views/Shop'
 import Dark from '../layouts/Dark'
 import Light from '../layouts/Light'
-import CarbonModels from '../views/CarbonModels'
 import ExhaustCarDetails from '../views/ExhaustCarDetails'
-import CarbonCarDetails from '../views/CarbonCarDetails'
 import ExhaustCarParts from '../views/ExhaustCarParts'
 import ExhaustCarPartsDetails from '../views/ExhaustCarPartsDetails'
 
@@ -37,9 +35,6 @@ const RouteApi = () => {
             <Route path='/:slug/:slugExhausts/:name' element={<Dark><ExhaustCarDetails /></Dark>} />
             <Route path='/:slug/:slugExhausts/:name/:part' element={<Dark><ExhaustCarParts /></Dark>} /> 
             <Route path='/:slug/:slugExhausts/:name/:part/:partName' element={<Dark><ExhaustCarPartsDetails /></Dark>} /> 
-
-            <Route path='/:slug/:slugCarbon' element={<Dark><CarbonModels /></Dark>} /> 
-            <Route path='/:slug/:slugCarbon/:name' element={<Light><CarbonCarDetails /></Light>} /> 
 
 
             <Route path="/shop" element={<Dark><Shop /></Dark>} />
