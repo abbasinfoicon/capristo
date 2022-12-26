@@ -30,11 +30,11 @@ const Career = () => {
           ) : careerDetails.data ? (
             <>
               {
-                careerDetails.data.map(({ postion, location }, index) => {
+                careerDetails.data.map(({ postion, location, slug }, index) => {
                   return (
-                    <div className="col-md-6">
+                    <div className="col-md-6" key={index}>
                       <div className="jop_des">
-                        <Link to='/'>
+                        <Link to={slug}>
                           <div className="icon">
                             <img src="assets/img/places.png" alt="MapMarker" className="img-fluid" />
                           </div>

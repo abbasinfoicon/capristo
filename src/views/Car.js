@@ -32,8 +32,8 @@ const Car = () => {
                                         <a className="popup-youtube" onClick={() => setOpen(true)}><img src={"/" + img} alt="" className="img-fluid" /></a>
 
                                         <div className="btns-link">
-                                            <Link to={`/car-list/${slug}/${slug}-exhausts`}>Explore Exhausts Systems <i className="fa fa-plus"></i></Link>
-                                            <Link to={`/car-list/${slug}/${slug}-carbon`}>Explore Carbon Parts <i className="fa fa-plus"></i></Link>
+                                            <Link to={`/${slug}/${slug}-exhausts`}>Explore Exhausts Systems <i className="fa fa-plus"></i></Link>
+                                            <Link to={`/${slug}/${slug}-carbon`}>Explore Carbon Parts <i className="fa fa-plus"></i></Link>
                                         </div>
                                     </div>
                                 </div>

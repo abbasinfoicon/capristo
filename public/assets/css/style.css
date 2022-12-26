@@ -6026,6 +6026,7 @@ section.access-parts-area {}
 	margin-bottom: 20px;
 }
 
+.jop_des,
 .jop_des a {
 	display: flex;
 	align-items: center;
@@ -6500,26 +6501,82 @@ a.popup-youtube img {
 	height: 100%;
 	width: 100%;
 }
+
 .content_static {
-    background: #fff;
-    padding: 25px;
+	background: #fff;
+	padding: 25px;
 }
 
-.content_static p, .content_static h5 {
-    font-size: 14px;
-    margin-bottom: 10px;
+.content_static p,
+.content_static h5 {
+	font-size: 14px;
+	margin-bottom: 10px;
 }
 
 .content_static h3 {
-    font-size: 22px;
-    margin-bottom: 15px;
+	font-size: 22px;
+	margin-bottom: 15px;
 }
 
 .content_static h4 {
-    font-size: 20px;
-    margin-bottom: 15px;
+	font-size: 20px;
+	margin-bottom: 15px;
 }
 
 .content_static h5 {
 	font-weight: bold;
+}
+.job_des_dts {
+    padding: 25px;
+    background: #fff;
+}
+.job_des_dts {}
+
+.job_des_dts p {
+    font-size: 15px;
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+.job_des_dts ul {
+    padding-left: 20px;
+    margin-bottom: 15px;
+}
+
+.job_des_dts ul li {
+    font-size: 15px;
+    margin-bottom: 10px;
+    line-height: 1.4;
+    list-style: square;
+}
+
+.job_des_dts ul li:last-child {
+    margin-bottom: 0;
+}
+
+.job_des_dts h3 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+
+.job_des_dts a {
+    color: #007bff;
+    font-size: 15px;
+}
+
+.job_des_dts .apply_btn {
+    background: #000;
+    padding: 5px 25px;
+    display: inline-block;
+    margin-top: 30px;
+    border-radius: 35px;
+    color: #fff;
+    border: 1px solid #000;
+}
+
+.job_des_dts .apply_btn:hover {
+    color: #000;
+    background: #fff;
 }

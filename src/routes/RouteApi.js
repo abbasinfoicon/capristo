@@ -19,6 +19,7 @@ import Light from '../layouts/Light'
 import ExhaustCarDetails from '../views/ExhaustCarDetails'
 import ExhaustCarParts from '../views/ExhaustCarParts'
 import ExhaustCarPartsDetails from '../views/ExhaustCarPartsDetails'
+import CareerDetails from './CareerDetails'
 
 const RouteApi = () => {
 
@@ -29,18 +30,21 @@ const RouteApi = () => {
             <Route path="/contact" element={<Light><Contact /></Light>} />
 
             <Route path="/car-list" element={<Dark><CarList /></Dark>} />
-            <Route path="/car-list/:slug" element={<Light><Car /></Light>} />
-            
-            <Route path='/car-list/:slug/:slugExhausts' element={<Dark><ExhaustsModels /></Dark>} />
-            <Route path='/car-list/:slug/:slugExhausts/:name' element={<Dark><ExhaustCarDetails /></Dark>} />
-            <Route path='/car-list/:slug/:slugExhausts/:name/:part' element={<Dark><ExhaustCarParts /></Dark>} /> 
-            <Route path='/car-list/:slug/:slugExhausts/:name/:part/:partName' element={<Dark><ExhaustCarPartsDetails /></Dark>} /> 
+            <Route path="/:slug" element={<Light><Car /></Light>} />
+
+            <Route path='/:slug/:slugExhausts' element={<Dark><ExhaustsModels /></Dark>} />
+            <Route path='/:slug/:slugExhausts/:name' element={<Dark><ExhaustCarDetails /></Dark>} />
+            <Route path='/:slug/:slugExhausts/:name/:part' element={<Dark><ExhaustCarParts /></Dark>} />
+            <Route path='/:slug/:slugExhausts/:name/:part/:partName' element={<Dark><ExhaustCarPartsDetails /></Dark>} />
 
 
             <Route path="/shop" element={<Dark><Shop /></Dark>} />
             <Route path="/blog" element={<Dark><Blog /></Dark>} />
             <Route path="/partner" element={<Light><Partner /></Light>} />
+
             <Route path="/career" element={<Dark><Career /></Dark>} />
+            <Route path="/career/:details" element={<Dark><CareerDetails /></Dark>} />
+
             <Route path="/privacy-policy" element={<Dark><PrivacyPolicy /></Dark>} />
             <Route path="/cookie-policy" element={<Dark><CookiePolicy /></Dark>} />
             <Route path="/impressum" element={<Dark><Impressum /></Dark>} />
