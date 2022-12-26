@@ -16,39 +16,6 @@ const options = {
     mouseDrag: false,
     touchDrag: false,
 };
-const options2 = {
-    autoplay: true,
-    loop: true,
-    margin: 30,
-    touchDrag: true,
-    mouseDrag: true,
-    items: 1,
-    nav: true,
-    dots: false,
-    autoplayTimeout: 6000,
-    autoplaySpeed: 1200,
-    navText: [
-        "<img src='assets/img/left-chevron.png' alt='left'/>",
-        "<img src='assets/img/right-chevron.png' alt='right'/>",
-    ],
-    responsive: {
-        0: {
-            items: 1,
-        },
-        480: {
-            items: 1,
-        },
-        600: {
-            items: 2,
-        },
-        1000: {
-            items: 4,
-        },
-        1200: {
-            items: 4,
-        },
-    },
-};
 
 const CarbonCarDetails = () => {
     const params = useParams();
@@ -84,6 +51,7 @@ const CarbonCarDetails = () => {
                                                 <a
                                                     className="popup-youtube"
                                                     href="https://www.youtube.com/watch?v=rDE4il6JC4U"
+                                                    target="_blank"
                                                 ></a>
                                             </div>
                                         </div>

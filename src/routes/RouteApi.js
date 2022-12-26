@@ -19,7 +19,7 @@ import Light from '../layouts/Light'
 import ExhaustCarDetails from '../views/ExhaustCarDetails'
 import ExhaustCarParts from '../views/ExhaustCarParts'
 import ExhaustCarPartsDetails from '../views/ExhaustCarPartsDetails'
-import CareerDetails from './CareerDetails'
+import CareerDetails from '../views/CareerDetails'
 
 const RouteApi = () => {
 

@@ -6,7 +6,7 @@ import ModalVideo from 'react-modal-video'
 const Home = () => {
   const params = useParams();
   const [isOpen, setOpen] = useState(false)
-  console.log(params)
+  // console.log(params)
 
   useEffect(() => {
     document.body.classList.toggle('modal-open', isOpen);
