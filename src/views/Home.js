@@ -18,7 +18,7 @@ const Home = () => {
       <section className="capristo-slider-area fix">
         <HomeSlider />
       </section>
-      {/* adfasfdsf */}
+      
       <section className="about-page-area section_70 bg_gray">
         <div className="container">
           <div className="row">
