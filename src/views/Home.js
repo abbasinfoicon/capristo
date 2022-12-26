@@ -54,6 +54,7 @@ const Home = () => {
                 </div>
               </div>
             </div>
+            
             <div className="col-lg-6">
               <div className="about-page-right">
                 <div className="row">
@@ -92,6 +93,7 @@ const Home = () => {
               </div>
             </div>
           </div>
+
           <div className="row align-items-center">
             <div className="col-lg-6">
               <div className="about-page-left">
@@ -198,6 +200,7 @@ const Home = () => {
               </div>
             </div>
           </div>
+
           <div className="row align-items-center">
             <div className="col-lg-12">
               <div className="about-page-left">
