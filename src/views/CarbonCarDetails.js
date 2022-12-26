@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import OwlCarousel from "react-owl-carousel";
 import { useGetSingleCarQuery } from "../features/car/CarApi";
+import PageNotFound from "./PageNotFound";
 
 const options = {
     items: 1,
@@ -75,7 +76,7 @@ const CarbonCarDetails = () => {
                                 <div className="row">
                                     <div className="col-md-12">
                                         <ul className="tab">
-                                            {Object.keys(carbon).map((key,index) => {
+                                            {Object.keys(carbon).map((key, index) => {
                                                 if (
                                                     key != "id" &&
                                                     key != "name" &&
@@ -158,7 +159,7 @@ const CarbonCarDetails = () => {
                     </section>
                 </>
             ) : (
-                <>NOT DATA</>
+                <PageNotFound />
             )}
         </>
     );

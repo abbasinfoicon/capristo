@@ -5,7 +5,7 @@ import { useGetSingleCarQuery } from '../features/car/CarApi';
 const ExhaustCarParts = () => {
     const params = useParams();
     const { data, isError, isLoading } = useGetSingleCarQuery(params.slug);
-    console.log("ExhaustCarPart Data - ", params)
+    // console.log("ExhaustCarPart Data - ", params)
 
 
     return (

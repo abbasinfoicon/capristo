@@ -25,29 +25,29 @@ const RouteApi = () => {
 
     return (
         <Routes>
-            <Route path="/" element={<Light><Home /></Light>} />
-            <Route path="/about" element={<Dark><About /></Dark>} />
-            <Route path="/contact" element={<Light><Contact /></Light>} />
+            <Route exact path="/" element={<Light><Home /></Light>} />
+            <Route exact path="/about" element={<Dark><About /></Dark>} />
+            <Route exact path="/contact" element={<Light><Contact /></Light>} />
 
-            <Route path="/car-list" element={<Dark><CarList /></Dark>} />
-            <Route path="/:slug" element={<Light><Car /></Light>} />
+            <Route exact path="/car-list" element={<Dark><CarList /></Dark>} />
+            <Route exact path="/:slug" element={<Light><Car /></Light>} />
 
-            <Route path='/:slug/:slugExhausts' element={<Dark><ExhaustsModels /></Dark>} />
-            <Route path='/:slug/:slugExhausts/:name' element={<Dark><ExhaustCarDetails /></Dark>} />
-            <Route path='/:slug/:slugExhausts/:name/:part' element={<Dark><ExhaustCarParts /></Dark>} />
-            <Route path='/:slug/:slugExhausts/:name/:part/:partName' element={<Dark><ExhaustCarPartsDetails /></Dark>} />
+            <Route exact path='/:slug/:slugExhausts' element={<Dark><ExhaustsModels /></Dark>} />
+            <Route exact path='/:slug/:slugExhausts/:name' element={<Dark><ExhaustCarDetails /></Dark>} />
+            <Route exact path='/:slug/:slugExhausts/:name/:part' element={<Dark><ExhaustCarParts /></Dark>} />
+            <Route exact path='/:slug/:slugExhausts/:name/:part/:partName' element={<Dark><ExhaustCarPartsDetails /></Dark>} />
 
 
-            <Route path="/shop" element={<Dark><Shop /></Dark>} />
-            <Route path="/blog" element={<Dark><Blog /></Dark>} />
-            <Route path="/partner" element={<Light><Partner /></Light>} />
+            <Route exact path="/shop" element={<Dark><Shop /></Dark>} />
+            <Route exact path="/blog" element={<Dark><Blog /></Dark>} />
+            <Route exact path="/partner" element={<Light><Partner /></Light>} />
 
-            <Route path="/career" element={<Dark><Career /></Dark>} />
-            <Route path="/career/:details" element={<Dark><CareerDetails /></Dark>} />
+            <Route exact path="/career" element={<Dark><Career /></Dark>} />
+            <Route exact path="/career/:details" element={<Dark><CareerDetails /></Dark>} />
 
-            <Route path="/privacy-policy" element={<Dark><PrivacyPolicy /></Dark>} />
-            <Route path="/cookie-policy" element={<Dark><CookiePolicy /></Dark>} />
-            <Route path="/impressum" element={<Dark><Impressum /></Dark>} />
+            <Route exact path="/privacy-policy" element={<Dark><PrivacyPolicy /></Dark>} />
+            <Route exact path="/cookie-policy" element={<Dark><CookiePolicy /></Dark>} />
+            <Route exact path="/impressum" element={<Dark><Impressum /></Dark>} />
             <Route path="*" element={<Dark><PageNotFound /></Dark>} />
         </Routes>
     )

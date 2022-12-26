@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { useGetSingleCarQuery } from '../features/car/CarApi'
+import PageNotFound from './PageNotFound';
 
 const ExhaustsModels = () => {
     const params = useParams();
@@ -9,7 +10,7 @@ const ExhaustsModels = () => {
     // console.log("Models Data ", data.models);
 
     return (
-        <section className="cars-list-area marginTop-110px">
+        params.slugExhausts === params.slug + '-' + 'exhausts' || params.slugExhausts === params.slug + '-' + 'carbon' ? <section className="cars-list-area marginTop-110px">
             <div className="container-fluid">
                 <div className="row">
                     {isError ? (
@@ -18,7 +19,7 @@ const ExhaustsModels = () => {
                         <p className='isloading'>Loading...</p>
                     ) : data ? (
                         <>
-                            {params.slugExhausts.includes('exhausts') ?
+                            {params.slugExhausts === params.slug + '-' + 'exhausts' ?
                                 data[0].exhausts.map((item, index) => {
                                     return (
                                         <div className="col-md-12 text-center" key={index}>
@@ -49,7 +50,7 @@ const ExhaustsModels = () => {
                     ) : <>NOT DATA</>}
                 </div>
             </div>
-        </section>
+        </section> : <PageNotFound />
     )
 }
 
