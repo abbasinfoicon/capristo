@@ -1,8 +1,18 @@
-import React from 'react'
-import { Link } from 'react-router-dom';
+import React, { useEffect, useState } from 'react'
+import { Link, useParams } from 'react-router-dom';
 import HomeSlider from '../components/templates/HomeSlider';
+import ModalVideo from 'react-modal-video'
 
 const Home = () => {
+  const params = useParams();
+  const [isOpen, setOpen] = useState(false)
+  console.log(params)
+
+  useEffect(() => {
+    document.body.classList.toggle('modal-open', isOpen);
+  }, [isOpen])
+
+
   return (
     <>
       <section className="capristo-slider-area fix">
@@ -60,9 +70,9 @@ const Home = () => {
                   </div>
                   <div className="col-md-12">
                     <div className="video_wrapper video_wrapper_full js-videoWrapper">
-                      <a className="popup-youtube" href="https://www.youtube.com/watch?v=rDE4il6JC4U">
-                        <img src="assets/img/about/video1.jpg" alt="" className="img-fluid" />
-                      </a>
+                      <ModalVideo channel='youtube' autoplay isOpen={isOpen} videoId="rDE4il6JC4U" onClose={() => setOpen(false)} />
+
+                      <a className="popup-youtube" onClick={() => setOpen(true)}><img src="assets/img/about/video1.jpg" alt="" className="img-fluid" /></a>
                     </div>
                   </div>
                 </div>
@@ -253,6 +263,7 @@ const Home = () => {
                         </td>
                         <td><a href="#">Explore More</a></td>
                       </tr>
+                      
                     </tbody>
                   </table>
                 </div>
@@ -265,9 +276,8 @@ const Home = () => {
               <div className="about-page-right">
                 <div className="video_wrapper video_wrapper_full js-videoWrapper">
                   <div className="video_wrapper video_wrapper_full js-videoWrapper">
-                    <a className="popup-youtube" href="https://www.youtube.com/watch?v=rDE4il6JC4U">
-                      <img src="assets/img/about/video2.jpg" alt="" className="img-fluid" />
-                    </a>
+                    <ModalVideo channel='youtube' autoplay isOpen={isOpen} videoId="QDhLqbeVpKA" onClose={() => setOpen(false)} />
+                    <a className="popup-youtube" onClick={() => setOpen(true)}><img src="assets/img/about/video2.jpg" alt="" className="img-fluid" /></a>
                   </div>
                 </div>
               </div>

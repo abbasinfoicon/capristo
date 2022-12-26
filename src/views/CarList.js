@@ -25,10 +25,10 @@ const CarList = () => {
                     <div className={(index + 1) % 3 == 0 ? "col-md-12 text-center" : "col-md-6 text-right"} key={index}>
                       <div className="car-img-name">
                         <div className="img-style">
-                          <Link to={'/' + item.slug}><img src={item.img} alt="" className="img-fluid" /></Link>
+                          <Link to={'/car-list/' + item.slug}><img src={item.img} alt="" className="img-fluid" /></Link>
                         </div>
 
-                        <h3><Link to={'/' + item.slug}>{item.name}</Link></h3>
+                        <h3><Link to={'/car-list/' + item.slug}>{item.name}</Link></h3>
                       </div>
                     </div>
                   )

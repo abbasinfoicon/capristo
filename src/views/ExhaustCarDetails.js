@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import OwlCarousel from 'react-owl-carousel';
 import { useGetSingleCarQuery } from '../features/car/CarApi';
 import CarbonCarDetails from './CarbonCarDetails';
+import ModalVideo from 'react-modal-video'
 
 const options = {
     autoplay: true,
@@ -69,6 +70,11 @@ const ExhaustCarDetails = () => {
     const params = useParams();
 
     const { data, isError, isLoading } = useGetSingleCarQuery(params.slug);
+    const [isOpen, setOpen] = useState(false) 
+
+    useEffect(() => {
+      document.body.classList.toggle('modal-open', isOpen);
+    }, [isOpen])
 
     return (
         <> {params.slugExhausts.includes('exhausts') ? <>
@@ -112,7 +118,7 @@ const ExhaustCarDetails = () => {
             ) : data ? (
                 <>
                     {
-                        data[0].exhausts[0].models.map(({ id, product, artNo, img, desc, price, eceApproval, soundLavel, soundLavelComb250, soundLavelComb100, video, videobg }, index) => {
+                        data[0].exhausts[0].models.map(({ id, product, artNo, img, desc, price, eceApproval, soundLavel, soundLavelComb250, soundLavelComb100, video, videoId, videobg }, index) => {
                             return (
                                 <section key={id}>
                                     <div className={(index + 1) % 2 == 0 ? "product-details-area ptb-50 bg_gray" : "product-details-area bg_white"}>
@@ -165,9 +171,8 @@ const ExhaustCarDetails = () => {
                                                         <div className="col-lg-12">
                                                             <div className="about-page-right">
                                                                 <div className="video_wrapper video_wrapper_full js-videoWrapper">
-                                                                    <a className="popup-youtube" href={video}>
-                                                                        <img src={videobg} alt={videobg} className="img-fluid" />
-                                                                    </a>
+                                                                    <ModalVideo channel='youtube' autoplay isOpen={isOpen} videoId={videoId} onClose={() => setOpen(false)} />
+                                                                    <a className="popup-youtube" onClick={() => setOpen(true)}><img src={videobg} alt={videobg} className="img-fluid" /></a>
                                                                 </div>
                                                             </div>
                                                         </div>

@@ -52,7 +52,7 @@ const Header = () => {
                   <li><NavLink to='/car-list'>Products & Services</NavLink></li>
                   <li><NavLink to='/contact'>Company</NavLink></li>
                   <li><NavLink to='/shop'>Online Store</NavLink></li>
-                  <li><NavLink to='/blog'>Blog & News</NavLink></li>
+                  <li><NavLink to='/partner'>Find Supplier</NavLink></li>
                 </ul>
 
                 <div className="search-box-custom mobile-none">

@@ -29,12 +29,12 @@ const RouteApi = () => {
             <Route path="/contact" element={<Light><Contact /></Light>} />
 
             <Route path="/car-list" element={<Dark><CarList /></Dark>} />
-            <Route path="/:slug" element={<Light><Car /></Light>} />
+            <Route path="/car-list/:slug" element={<Light><Car /></Light>} />
             
-            <Route path='/:slug/:slugExhausts' element={<Dark><ExhaustsModels /></Dark>} />
-            <Route path='/:slug/:slugExhausts/:name' element={<Dark><ExhaustCarDetails /></Dark>} />
-            <Route path='/:slug/:slugExhausts/:name/:part' element={<Dark><ExhaustCarParts /></Dark>} /> 
-            <Route path='/:slug/:slugExhausts/:name/:part/:partName' element={<Dark><ExhaustCarPartsDetails /></Dark>} /> 
+            <Route path='/car-list/:slug/:slugExhausts' element={<Dark><ExhaustsModels /></Dark>} />
+            <Route path='/car-list/:slug/:slugExhausts/:name' element={<Dark><ExhaustCarDetails /></Dark>} />
+            <Route path='/car-list/:slug/:slugExhausts/:name/:part' element={<Dark><ExhaustCarParts /></Dark>} /> 
+            <Route path='/car-list/:slug/:slugExhausts/:name/:part/:partName' element={<Dark><ExhaustCarPartsDetails /></Dark>} /> 
 
 
             <Route path="/shop" element={<Dark><Shop /></Dark>} />

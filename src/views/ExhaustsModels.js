@@ -24,10 +24,10 @@ const ExhaustsModels = () => {
                                         <div className="col-md-12 text-center" key={index}>
                                             <div className="car-img-name">
                                                 <div className="img-style">
-                                                    <Link to={`/${params.slug}/${params.slug}-exhausts/${item.slug}`}><img src={item.img} alt="" className="img-fluid" /></Link>
+                                                    <Link to={`${item.slug}`}><img src={item.img} alt="" className="img-fluid" /></Link>
                                                 </div>
 
-                                                <h3><Link to={`/${params.slug}/${params.slug}-exhausts/${item.slug}`}>{item.name}</Link></h3>
+                                                <h3><Link to={`${item.slug}`}>{item.name}</Link></h3>
                                             </div>
                                         </div>
                                     )
@@ -36,10 +36,10 @@ const ExhaustsModels = () => {
                                         <div className="col-md-12 text-center" key={index}>
                                             <div className="car-img-name">
                                                 <div className="img-style">
-                                                    <Link to={`/${params.slug}/${params.slug}-carbon/${item.slug}`}><img src={item.img} alt="" className="img-fluid" /></Link>
+                                                    <Link to={`${item.slug}`}><img src={item.img} alt="" className="img-fluid" /></Link>
                                                 </div>
 
-                                                <h3><Link to={`/${params.slug}/${params.slug}-carbon/${item.slug}`}>{item.name}</Link></h3>
+                                                <h3><Link to={`${item.slug}`}>{item.name}</Link></h3>
                                             </div>
                                         </div>
                                     )
