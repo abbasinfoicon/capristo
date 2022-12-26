@@ -18,7 +18,7 @@ const Home = () => {
       <section className="capristo-slider-area fix">
         <HomeSlider />
       </section>
-
+      {/* about-page-area */}
       <section className="about-page-area section_70 bg_gray">
         <div className="container">
           <div className="row">
@@ -54,7 +54,7 @@ const Home = () => {
                 </div>
               </div>
             </div>
-            
+
             <div className="col-lg-6">
               <div className="about-page-right">
                 <div className="row">
@@ -82,7 +82,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-
+      {/* excellence-page-area */}
       <section className="excellence-page-area section_70 bg_white">
         <div className="container">
           <div className="row">
@@ -117,7 +117,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-
+      {/* power-page-area */}
       <section className="power-page-area section_70 bg_gray">
         <div className="container">
           <div className="row">
@@ -189,7 +189,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-
+      {/* facts-page-area */}
       <section className="facts-page-area section_70 bg_white">
         <div className="container">
           <div className="row">
@@ -266,7 +266,7 @@ const Home = () => {
                         </td>
                         <td><a href="#">Explore More</a></td>
                       </tr>
-                      
+
                     </tbody>
                   </table>
                 </div>
@@ -288,7 +288,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-
+      {/* endurance-page-area */}
       <section className="endurance-page-area section_70 bg_gray">
         <div className="container">
           <div className="row">
@@ -336,7 +336,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-
+      {/* about_us-area */}
       <section className="about_us-area section_70 bg_white">
         <div className="container">
           <div className="row">
